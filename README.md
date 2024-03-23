@@ -31,7 +31,7 @@ Glavne funkcije koje će upotrebljavati korisnici programskog rješenja “e-Bus
 Provedbom programskog rješenja koji se temelji na dobivenim zahtjevima korisnika, očekuje se povećanje učinkovitosti poslovnih procesa, te poboljšano iskustvo putnika.
 
 ## Zadatak
-Zadaća 1. - Analiza i specifikacija zahtjeva - 
+Zadaća 1. - Analiza i specifikacija zahtjeva - https://github.com/foivz/pi2024-zadace-pzvonarek20/wiki/Tehni%C4%8Dka-dokumentacija
 
 ## Resursi
 
