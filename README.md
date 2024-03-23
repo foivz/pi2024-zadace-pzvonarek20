@@ -31,7 +31,7 @@ Glavne funkcije koje će upotrebljavati korisnici programskog rješenja “e-Bus
 Provedbom programskog rješenja koji se temelji na dobivenim zahtjevima korisnika, očekuje se povećanje učinkovitosti poslovnih procesa, te poboljšano iskustvo putnika.
 
 ## Zadatak
-(U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
+Zadaća 1. - Analiza i specifikacija zahtjeva - 
 
 ## Resursi
 
