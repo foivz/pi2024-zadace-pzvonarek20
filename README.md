@@ -35,6 +35,7 @@ Zadatak - Gradski prijevoz [Zadatak - Gradski prijevoz.pdf](https://github.com/f
 
 
 Zadaća 1. - Analiza i specifikacija zahtjeva - https://github.com/foivz/pi2024-zadace-pzvonarek20/wiki/Tehni%C4%8Dka-dokumentacija
+Zadaća 2. - Specifikacija dizajna programskog proizvoda - https://github.com/foivz/pi2024-zadace-pzvonarek20/wiki/Specifikacija-dizajna
 
 ## Resursi
 
