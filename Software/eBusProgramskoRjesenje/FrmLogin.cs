@@ -12,8 +12,8 @@ namespace eBusProgramskoRjesenje
 {
     public partial class FrmLogin : Form
     {
-        string username = "korisnik";
-        string password = "password";
+        string korime = "korisnik";
+        string lozinka = "password";
         public FrmLogin()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace eBusProgramskoRjesenje
             }
             else 
             {
-                if (txtUsername.Text == username && txtPassword.Text == password)
+                if (txtUsername.Text == korime && txtPassword.Text == lozinka)
                 {
                     FrmVozniPark frmVozniPark = new FrmVozniPark();
                     Hide();

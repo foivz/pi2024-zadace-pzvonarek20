@@ -58,6 +58,8 @@
     <Compile Include="FrmVozniPark.Designer.cs">
       <DependentUpon>FrmVozniPark.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Osoba.cs" />
+    <Compile Include="Models\Zaposlenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
