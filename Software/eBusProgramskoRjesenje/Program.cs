@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace eBusProgramskoRjesenje
         [STAThread]
         static void Main()
         {
+            DB.SetConfiguration("PI2324_pzvonarek20_DB", "PI2324_pzvonarek20_User", "S(M:n9t$");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());

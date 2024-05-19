@@ -28,12 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvVozniPark = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVozniPark)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvVozniPark
+            // 
+            this.dgvVozniPark.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVozniPark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVozniPark.Location = new System.Drawing.Point(25, 27);
+            this.dgvVozniPark.Name = "dgvVozniPark";
+            this.dgvVozniPark.RowHeadersWidth = 51;
+            this.dgvVozniPark.RowTemplate.Height = 24;
+            this.dgvVozniPark.Size = new System.Drawing.Size(738, 345);
+            this.dgvVozniPark.TabIndex = 0;
+            // 
+            // FrmVozniPark
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvVozniPark);
+            this.Name = "FrmVozniPark";
             this.Text = "FrmVozniPark";
+            this.Load += new System.EventHandler(this.FrmVozniPark_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVozniPark)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvVozniPark;
     }
 }

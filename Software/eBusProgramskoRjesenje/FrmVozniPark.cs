@@ -1,4 +1,6 @@
-﻿using System;
+﻿using eBusProgramskoRjesenje.Models;
+using eBusProgramskoRjesenje.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,17 @@ namespace eBusProgramskoRjesenje
         public FrmVozniPark()
         {
             InitializeComponent();
+        }
+
+        private void FrmVozniPark_Load(object sender, EventArgs e)
+        {
+            ShowVozila();
+        }
+
+        private void ShowVozila()
+        {
+            List<Vozilo> vozila = RepozitorijVoznogParka.GetVozila();
+            dgvVozniPark.DataSource = vozila;
         }
     }
 }
