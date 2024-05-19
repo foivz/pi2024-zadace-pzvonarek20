@@ -33,7 +33,10 @@ namespace eBusProgramskoRjesenje
             {
                 if (txtUsername.Text == username && txtPassword.Text == password)
                 {
-                    MessageBox.Show("Dobrodošli!", "Uspiješno ste prijavljeni", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmVozniPark frmVozniPark = new FrmVozniPark();
+                    Hide();
+                    frmVozniPark.ShowDialog();
+                    Close();
                 }
                 else 
                 {
