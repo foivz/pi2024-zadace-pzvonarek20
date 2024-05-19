@@ -28,6 +28,7 @@ namespace eBusProgramskoRjesenje
         {
             List<Vozilo> vozila = RepozitorijVoznogParka.GetVozila();
             dgvVozniPark.DataSource = vozila;
+
         }
     }
 }
