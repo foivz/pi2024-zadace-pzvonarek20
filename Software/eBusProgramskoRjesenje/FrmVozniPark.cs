@@ -30,5 +30,11 @@ namespace eBusProgramskoRjesenje
             dgvVozniPark.DataSource = vozila;
 
         }
+
+        private void btnDodajVozilo_Click(object sender, EventArgs e)
+        {
+            FrmDodajVozilo frmDodajVozilo = new FrmDodajVozilo();   
+            frmDodajVozilo.ShowDialog();
+        }
     }
 }

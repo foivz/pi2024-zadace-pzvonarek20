@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvVozniPark = new System.Windows.Forms.DataGridView();
+            this.btnDodajVozilo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniPark)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,11 +47,22 @@
             this.dgvVozniPark.Size = new System.Drawing.Size(1059, 343);
             this.dgvVozniPark.TabIndex = 0;
             // 
+            // btnDodajVozilo
+            // 
+            this.btnDodajVozilo.Location = new System.Drawing.Point(936, 389);
+            this.btnDodajVozilo.Name = "btnDodajVozilo";
+            this.btnDodajVozilo.Size = new System.Drawing.Size(148, 61);
+            this.btnDodajVozilo.TabIndex = 1;
+            this.btnDodajVozilo.Text = "Dodaj vozilo";
+            this.btnDodajVozilo.UseVisualStyleBackColor = true;
+            this.btnDodajVozilo.Click += new System.EventHandler(this.btnDodajVozilo_Click);
+            // 
             // FrmVozniPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 504);
+            this.Controls.Add(this.btnDodajVozilo);
             this.Controls.Add(this.dgvVozniPark);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmVozniPark";
@@ -65,5 +77,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvVozniPark;
+        private System.Windows.Forms.Button btnDodajVozilo;
     }
 }
