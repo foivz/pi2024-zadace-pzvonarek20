@@ -50,6 +50,7 @@ namespace eBusProgramskoRjesenje.Repositories
         private static Vozilo CreateObject(SqlDataReader reader)
         { 
             int id = int.Parse(reader["Id_vozila"].ToString());
+            string model_vozila = reader["model_vozila"].ToString();
             string vrsta_vozila = reader["vrsta_vozila"].ToString();
             string tablica_vozila = reader["tablica_vozila"].ToString();
             string namjena_vozila = reader["namjena_vozila"].ToString();
@@ -58,6 +59,7 @@ namespace eBusProgramskoRjesenje.Repositories
             var vozilo = new Vozilo
             {
                 Id_vozila = id,
+                model_vozila=model_vozila,
                 vrsta_vozila = vrsta_vozila,
                 tablica_vozila = tablica_vozila,
                 namjena_vozila = namjena_vozila,
@@ -66,10 +68,10 @@ namespace eBusProgramskoRjesenje.Repositories
             return vozilo;
         }
 
-        public static void DodajNovoVozilo(string vrstaVozila, string tablicaVozila, string namjenaVozila, string detaljneInformacije)
+        public static void DodajNovoVozilo(string modelVozila, string vrstaVozila, string tablicaVozila, string namjenaVozila, string detaljneInformacije)
         {
-            string sql = $"INSERT INTO vozilo (vrsta_vozila, tablica_vozila, namjena_vozila, detaljne_informacije) " +
-                         $"VALUES ('{vrstaVozila}', '{tablicaVozila}', '{namjenaVozila}', '{detaljneInformacije}')";
+            string sql = $"INSERT INTO vozilo (model_vozila, vrsta_vozila, tablica_vozila, namjena_vozila, detaljne_informacije) " +
+                         $"VALUES ('{modelVozila}', '{vrstaVozila}', '{tablicaVozila}', '{namjenaVozila}', '{detaljneInformacije}')";
 
             try
             {

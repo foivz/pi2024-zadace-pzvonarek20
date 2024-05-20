@@ -37,6 +37,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtDetaljneInformacije = new System.Windows.Forms.TextBox();
             this.btnDodajNovoVozilo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtModelVozila = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -114,11 +116,29 @@
             this.btnDodajNovoVozilo.UseVisualStyleBackColor = true;
             this.btnDodajNovoVozilo.Click += new System.EventHandler(this.btnDodajNovoVozilo_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(111, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 16);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Model vozila:";
+            // 
+            // txtModelVozila
+            // 
+            this.txtModelVozila.Location = new System.Drawing.Point(114, 103);
+            this.txtModelVozila.Name = "txtModelVozila";
+            this.txtModelVozila.Size = new System.Drawing.Size(131, 22);
+            this.txtModelVozila.TabIndex = 12;
+            // 
             // FrmDodajVozilo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 401);
+            this.Controls.Add(this.txtModelVozila);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDodajNovoVozilo);
             this.Controls.Add(this.txtDetaljneInformacije);
             this.Controls.Add(this.label5);
@@ -149,5 +169,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDetaljneInformacije;
         private System.Windows.Forms.Button btnDodajNovoVozilo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtModelVozila;
     }
 }

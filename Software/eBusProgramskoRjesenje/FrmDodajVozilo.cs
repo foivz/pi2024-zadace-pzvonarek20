@@ -20,13 +20,14 @@ namespace eBusProgramskoRjesenje
 
         private void btnDodajNovoVozilo_Click(object sender, EventArgs e)
         {
-            
+
+            string modelVozila = txtModelVozila.Text;
             string vrstaVozila = txtVrstaVozila.Text;
             string tablicaVozila = txtTablicaVozila.Text;
             string namjenaVozila = txtNamjenaVozila.Text;
             string detaljneInformacije = txtDetaljneInformacije.Text;
 
-            RepozitorijVoznogParka.DodajNovoVozilo(vrstaVozila, tablicaVozila, namjenaVozila, detaljneInformacije);
+            RepozitorijVoznogParka.DodajNovoVozilo(modelVozila, vrstaVozila, tablicaVozila, namjenaVozila, detaljneInformacije);
             MessageBox.Show("Vozilo je uspiješno dodano u bazu podataka.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
