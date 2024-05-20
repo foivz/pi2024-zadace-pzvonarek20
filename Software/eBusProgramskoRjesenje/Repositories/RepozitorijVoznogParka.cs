@@ -32,7 +32,9 @@ namespace eBusProgramskoRjesenje.Repositories
         { 
             List<Vozilo> vozila = new List<Vozilo>();
 
-            string sql = "SELECT * FROM vozilo";
+            string sql = "SELECT v.Id_vozila, v.model_vozila, vr.naziv_vrste_vozila, v.tablica_vozila, v.namjena_vozila, v.detaljne_informacije " +
+                         "FROM vozilo v " +
+                         "JOIN vrsta_vozila vr ON v.Id_vrste_vozila = vr.Id_vrste_vozila";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
 
@@ -51,7 +53,7 @@ namespace eBusProgramskoRjesenje.Repositories
         { 
             int id = int.Parse(reader["Id_vozila"].ToString());
             string model_vozila = reader["model_vozila"].ToString();
-            string id_vrste_vozila = reader["Id_vrste_vozila"].ToString();
+            string naziv_vrste_vozila = reader["naziv_vrste_vozila"].ToString();
             string tablica_vozila = reader["tablica_vozila"].ToString();
             string namjena_vozila = reader["namjena_vozila"].ToString();
             string detaljne_informacije = reader["detaljne_informacije"].ToString();
@@ -60,7 +62,7 @@ namespace eBusProgramskoRjesenje.Repositories
             {
                 Id_vozila = id,
                 model_vozila=model_vozila,
-                Id_vrste_vozila = id_vrste_vozila,
+                naziv_vrste_vozila = naziv_vrste_vozila,
                 tablica_vozila = tablica_vozila,
                 namjena_vozila = namjena_vozila,
                 detaljne_informacije = detaljne_informacije
@@ -120,6 +122,5 @@ namespace eBusProgramskoRjesenje.Repositories
             };
             return vrsta_vozila;
         }
-
     }
 }
