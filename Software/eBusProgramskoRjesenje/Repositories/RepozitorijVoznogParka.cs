@@ -51,7 +51,7 @@ namespace eBusProgramskoRjesenje.Repositories
         { 
             int id = int.Parse(reader["Id_vozila"].ToString());
             string model_vozila = reader["model_vozila"].ToString();
-            string vrsta_vozila = reader["vrsta_vozila"].ToString();
+            string id_vrste_vozila = reader["Id_vrste_vozila"].ToString();
             string tablica_vozila = reader["tablica_vozila"].ToString();
             string namjena_vozila = reader["namjena_vozila"].ToString();
             string detaljne_informacije = reader["detaljne_informacije"].ToString();
@@ -60,7 +60,7 @@ namespace eBusProgramskoRjesenje.Repositories
             {
                 Id_vozila = id,
                 model_vozila=model_vozila,
-                vrsta_vozila = vrsta_vozila,
+                Id_vrste_vozila = id_vrste_vozila,
                 tablica_vozila = tablica_vozila,
                 namjena_vozila = namjena_vozila,
                 detaljne_informacije = detaljne_informacije
@@ -68,9 +68,9 @@ namespace eBusProgramskoRjesenje.Repositories
             return vozilo;
         }
 
-        public static void DodajNovoVozilo(string modelVozila, string vrstaVozila, string tablicaVozila, string namjenaVozila, string detaljneInformacije)
+        public static void DodajNovoVozilo(string modelVozila, int vrstaVozila, string tablicaVozila, string namjenaVozila, string detaljneInformacije)
         {
-            string sql = $"INSERT INTO vozilo (model_vozila, vrsta_vozila, tablica_vozila, namjena_vozila, detaljne_informacije) " +
+            string sql = $"INSERT INTO vozilo (model_vozila,  Id_vrste_vozila, tablica_vozila, namjena_vozila, detaljne_informacije) " +
                          $"VALUES ('{modelVozila}', '{vrstaVozila}', '{tablicaVozila}', '{namjenaVozila}', '{detaljneInformacije}')";
 
             try
@@ -86,6 +86,39 @@ namespace eBusProgramskoRjesenje.Repositories
             {
                 DB.CloseConnection();
             }
+        }
+
+        public static List<Vrsta_vozila> GetVrstaVozila()
+        {
+            List<Vrsta_vozila> vrsteVozila = new List<Vrsta_vozila>();
+
+            string sql = "SELECT * FROM vrsta_vozila";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+
+            while (reader.Read())
+            {
+                Vrsta_vozila vrsta_vozila = CreateObject2(reader);
+                vrsteVozila.Add(vrsta_vozila);
+            }
+            reader.Close();
+            DB.CloseConnection();
+
+            return vrsteVozila;
+        }
+        private static Vrsta_vozila CreateObject2(SqlDataReader reader)
+        {
+            int id = int.Parse(reader["Id_vrste_vozila"].ToString());
+            string naziv_vrste_vozila = reader["naziv_vrste_vozila"].ToString();
+            string opis_vrste_vozila = reader["opis_vrste_vozila"].ToString();
+
+            var vrsta_vozila = new Vrsta_vozila
+            {
+                Id_vrste_vozila = id,
+                Naziv_vrste_vozila = naziv_vrste_vozila,
+                Opis_vrste_vozila = opis_vrste_vozila,
+            };
+            return vrsta_vozila;
         }
 
     }

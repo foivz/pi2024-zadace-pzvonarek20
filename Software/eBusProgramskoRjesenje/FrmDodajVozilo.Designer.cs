@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.txtVrstaVozila = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTablicaVozila = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.btnDodajNovoVozilo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtModelVozila = new System.Windows.Forms.TextBox();
+            this.cboVrstaVozila = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label2
@@ -49,13 +49,6 @@
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Vrsta vozila: ";
-            // 
-            // txtVrstaVozila
-            // 
-            this.txtVrstaVozila.Location = new System.Drawing.Point(114, 147);
-            this.txtVrstaVozila.Name = "txtVrstaVozila";
-            this.txtVrstaVozila.Size = new System.Drawing.Size(179, 22);
-            this.txtVrstaVozila.TabIndex = 3;
             // 
             // label3
             // 
@@ -132,11 +125,21 @@
             this.txtModelVozila.Size = new System.Drawing.Size(131, 22);
             this.txtModelVozila.TabIndex = 12;
             // 
+            // cboVrstaVozila
+            // 
+            this.cboVrstaVozila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVrstaVozila.FormattingEnabled = true;
+            this.cboVrstaVozila.Location = new System.Drawing.Point(114, 147);
+            this.cboVrstaVozila.Name = "cboVrstaVozila";
+            this.cboVrstaVozila.Size = new System.Drawing.Size(179, 24);
+            this.cboVrstaVozila.TabIndex = 13;
+            // 
             // FrmDodajVozilo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 401);
+            this.Controls.Add(this.cboVrstaVozila);
             this.Controls.Add(this.txtModelVozila);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDodajNovoVozilo);
@@ -146,7 +149,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTablicaVozila);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtVrstaVozila);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -154,6 +156,7 @@
             this.Name = "FrmDodajVozilo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDodajVozilo";
+            this.Load += new System.EventHandler(this.FrmDodajVozilo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +164,6 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtVrstaVozila;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTablicaVozila;
         private System.Windows.Forms.Label label4;
@@ -171,5 +173,6 @@
         private System.Windows.Forms.Button btnDodajNovoVozilo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtModelVozila;
+        private System.Windows.Forms.ComboBox cboVrstaVozila;
     }
 }

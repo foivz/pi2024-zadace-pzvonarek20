@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="Models\Osoba.cs" />
     <Compile Include="Models\Vozilo.cs" />
+    <Compile Include="Models\Vrsta_vozila.cs" />
     <Compile Include="Models\Zaposlenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

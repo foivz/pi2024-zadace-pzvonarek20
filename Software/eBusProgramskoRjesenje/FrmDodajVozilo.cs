@@ -1,4 +1,5 @@
-﻿using eBusProgramskoRjesenje.Repositories;
+﻿using eBusProgramskoRjesenje.Models;
+using eBusProgramskoRjesenje.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,20 +19,36 @@ namespace eBusProgramskoRjesenje
             InitializeComponent();
         }
 
+        private void LoadVrsteVozila()
+        {
+            List<Vrsta_vozila> vrsteVozila = RepozitorijVoznogParka.GetVrstaVozila();
+            cboVrstaVozila.DataSource = vrsteVozila;
+            cboVrstaVozila.DisplayMember = "Naziv_vrste_vozila";
+            cboVrstaVozila.ValueMember = "Id_vrste_vozila";
+        }
+
         private void btnDodajNovoVozilo_Click(object sender, EventArgs e)
         {
 
             string modelVozila = txtModelVozila.Text;
-            string vrstaVozila = txtVrstaVozila.Text;
+            int idVrstaVozila = (int)cboVrstaVozila.SelectedValue;
             string tablicaVozila = txtTablicaVozila.Text;
             string namjenaVozila = txtNamjenaVozila.Text;
             string detaljneInformacije = txtDetaljneInformacije.Text;
-
-            RepozitorijVoznogParka.DodajNovoVozilo(modelVozila, vrstaVozila, tablicaVozila, namjenaVozila, detaljneInformacije);
-            MessageBox.Show("Vozilo je uspiješno dodano u bazu podataka.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Close();
+            try 
+            {
+                RepozitorijVoznogParka.DodajNovoVozilo(modelVozila, idVrstaVozila, tablicaVozila, namjenaVozila, detaljneInformacije);
+                MessageBox.Show("Vozilo je uspiješno dodano u bazu podataka.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            } catch
+            {
+                MessageBox.Show("Nije uspjelo.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-
+        private void FrmDodajVozilo_Load(object sender, EventArgs e)
+        {
+            LoadVrsteVozila();
+        }
     }
 }
