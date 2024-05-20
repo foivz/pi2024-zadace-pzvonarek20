@@ -35,6 +35,7 @@ namespace eBusProgramskoRjesenje
         {
             FrmDodajVozilo frmDodajVozilo = new FrmDodajVozilo();   
             frmDodajVozilo.ShowDialog();
+            ShowVozila();
         }
     }
 }

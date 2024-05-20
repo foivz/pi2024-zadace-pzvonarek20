@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIDVozila = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtVrstaVozila = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,22 +38,6 @@
             this.txtDetaljneInformacije = new System.Windows.Forms.TextBox();
             this.btnDodajNovoVozilo = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID vozila:";
-            // 
-            // txtIDVozila
-            // 
-            this.txtIDVozila.Location = new System.Drawing.Point(114, 103);
-            this.txtIDVozila.Name = "txtIDVozila";
-            this.txtIDVozila.Size = new System.Drawing.Size(131, 22);
-            this.txtIDVozila.TabIndex = 1;
             // 
             // label2
             // 
@@ -130,6 +112,7 @@
             this.btnDodajNovoVozilo.TabIndex = 10;
             this.btnDodajNovoVozilo.Text = "Dodaj novo vozilo";
             this.btnDodajNovoVozilo.UseVisualStyleBackColor = true;
+            this.btnDodajNovoVozilo.Click += new System.EventHandler(this.btnDodajNovoVozilo_Click);
             // 
             // FrmDodajVozilo
             // 
@@ -145,8 +128,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtVrstaVozila);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtIDVozila);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -159,9 +140,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIDVozila;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtVrstaVozila;
         private System.Windows.Forms.Label label3;

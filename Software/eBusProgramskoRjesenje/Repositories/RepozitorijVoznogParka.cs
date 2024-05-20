@@ -65,5 +65,26 @@ namespace eBusProgramskoRjesenje.Repositories
             };
             return vozilo;
         }
+
+        public static void DodajNovoVozilo(string vrstaVozila, string tablicaVozila, string namjenaVozila, string detaljneInformacije)
+        {
+            string sql = $"INSERT INTO vozilo (vrsta_vozila, tablica_vozila, namjena_vozila, detaljne_informacije) " +
+                         $"VALUES ('{vrstaVozila}', '{tablicaVozila}', '{namjenaVozila}', '{detaljneInformacije}')";
+
+            try
+            {
+                DB.OpenConnection();
+                DB.ExecuteCommand(sql);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Došlo je do greške prilikom dodavanja novog vozila: {ex.Message}");
+            }
+            finally
+            {
+                DB.CloseConnection();
+            }
+        }
+
     }
 }
