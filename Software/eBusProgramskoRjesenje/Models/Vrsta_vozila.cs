@@ -8,9 +8,9 @@ namespace eBusProgramskoRjesenje.Models
 {
     public class Vrsta_vozila
     {
-        public int Id_vrste_vozila {  get; set; }
-        public string Naziv_vrste_vozila { get; set; }
-        public string Opis_vrste_vozila { get; set; }
+        public int IdVrsteVozila {  get; set; }
+        public string NazivVrsteVozila { get; set; }
+        public string OpisVrsteVozila { get; set; }
 
 
     }

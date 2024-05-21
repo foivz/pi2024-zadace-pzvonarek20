@@ -52,20 +52,20 @@ namespace eBusProgramskoRjesenje.Repositories
         private static Vozilo CreateObject(SqlDataReader reader)
         { 
             int id = int.Parse(reader["Id_vozila"].ToString());
-            string model_vozila = reader["model_vozila"].ToString();
-            string naziv_vrste_vozila = reader["naziv_vrste_vozila"].ToString();
-            string tablica_vozila = reader["tablica_vozila"].ToString();
-            string namjena_vozila = reader["namjena_vozila"].ToString();
-            string detaljne_informacije = reader["detaljne_informacije"].ToString();
+            string modelVozila = reader["model_vozila"].ToString();
+            string nazivVrsteVozila = reader["naziv_vrste_vozila"].ToString();
+            string tablicaVozila = reader["tablica_vozila"].ToString();
+            string namjenaVozila = reader["namjena_vozila"].ToString();
+            string detaljneInformacije = reader["detaljne_informacije"].ToString();
 
             var vozilo = new Vozilo
             {
-                Id_vozila = id,
-                model_vozila=model_vozila,
-                naziv_vrste_vozila = naziv_vrste_vozila,
-                tablica_vozila = tablica_vozila,
-                namjena_vozila = namjena_vozila,
-                detaljne_informacije = detaljne_informacije
+                IdVozila = id,
+                ModelVozila=modelVozila,
+                NazivVrsteVozila = nazivVrsteVozila,
+                TablicaVozila = tablicaVozila,
+                NamjenaVozila = namjenaVozila,
+                DetaljneInformacije = detaljneInformacije
             };
             return vozilo;
         }
@@ -111,16 +111,35 @@ namespace eBusProgramskoRjesenje.Repositories
         private static Vrsta_vozila CreateObject2(SqlDataReader reader)
         {
             int id = int.Parse(reader["Id_vrste_vozila"].ToString());
-            string naziv_vrste_vozila = reader["naziv_vrste_vozila"].ToString();
-            string opis_vrste_vozila = reader["opis_vrste_vozila"].ToString();
+            string nazivVrsteVozila = reader["naziv_vrste_vozila"].ToString();
+            string opisVrsteVozila = reader["opis_vrste_vozila"].ToString();
 
             var vrsta_vozila = new Vrsta_vozila
             {
-                Id_vrste_vozila = id,
-                Naziv_vrste_vozila = naziv_vrste_vozila,
-                Opis_vrste_vozila = opis_vrste_vozila,
+                IdVrsteVozila = id,
+                NazivVrsteVozila = nazivVrsteVozila,
+                OpisVrsteVozila = opisVrsteVozila,
             };
             return vrsta_vozila;
         }
+
+        //Metoda za brisanje vozila
+        public static bool ObrisiVozilo(int voziloId)
+        {
+            try 
+            {
+                string sql = $"DELETE FROM vozilo WHERE Id_vozila = {voziloId}";
+                DB.OpenConnection();
+                DB.ExecuteCommand(sql);
+                DB.CloseConnection();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Greška prilikom brisanja vozila: " + ex.Message);
+                return false;
+            }
+        }
+
     }
 }

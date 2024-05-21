@@ -8,11 +8,11 @@ namespace eBusProgramskoRjesenje.Models
 {
     public class Vozilo
     {
-        public int Id_vozila { get; set; }
-        public string model_vozila { get; set; }
-        public string naziv_vrste_vozila { get; set;}
-        public string tablica_vozila { get; set; }
-        public string namjena_vozila { get; set; }
-        public string detaljne_informacije { get; set; }
+        public int IdVozila { get; set; }
+        public string ModelVozila { get; set; }
+        public string NazivVrsteVozila { get; set;}
+        public string TablicaVozila { get; set; }
+        public string NamjenaVozila { get; set; }
+        public string DetaljneInformacije { get; set; }
     }
 }

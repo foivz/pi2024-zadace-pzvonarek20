@@ -23,8 +23,8 @@ namespace eBusProgramskoRjesenje
         {
             List<Vrsta_vozila> vrsteVozila = RepozitorijVoznogParka.GetVrstaVozila();
             cboVrstaVozila.DataSource = vrsteVozila;
-            cboVrstaVozila.DisplayMember = "Naziv_vrste_vozila";
-            cboVrstaVozila.ValueMember = "Id_vrste_vozila";
+            cboVrstaVozila.DisplayMember = "NazivVrsteVozila";
+            cboVrstaVozila.ValueMember = "IdVrsteVozila";
         }
 
         private void btnDodajNovoVozilo_Click(object sender, EventArgs e)
