@@ -28,6 +28,7 @@ namespace eBusProgramskoRjesenje.Repositories
 
         }
 
+        //Metoda za dohvaćanje svih vozila iz baze
         public static List<Vozilo> GetVozila()
         { 
             List<Vozilo> vozila = new List<Vozilo>();
@@ -49,6 +50,7 @@ namespace eBusProgramskoRjesenje.Repositories
             return vozila;
         }
 
+        //Pohrana dohvaćenih vozila
         private static Vozilo CreateObject(SqlDataReader reader)
         { 
             int id = int.Parse(reader["Id_vozila"].ToString());
@@ -70,6 +72,7 @@ namespace eBusProgramskoRjesenje.Repositories
             return vozilo;
         }
 
+        //Metoda za dodavanje novog vozila u bazu
         public static void DodajNovoVozilo(string modelVozila, int vrstaVozila, string tablicaVozila, string namjenaVozila, string detaljneInformacije)
         {
             string sql = $"INSERT INTO vozilo (model_vozila,  Id_vrste_vozila, tablica_vozila, namjena_vozila, detaljne_informacije) " +
@@ -90,6 +93,7 @@ namespace eBusProgramskoRjesenje.Repositories
             }
         }
 
+        //Metoda za dohvaćanje rvste vozila iz baze
         public static List<Vrsta_vozila> GetVrstaVozila()
         {
             List<Vrsta_vozila> vrsteVozila = new List<Vrsta_vozila>();
@@ -108,6 +112,7 @@ namespace eBusProgramskoRjesenje.Repositories
 
             return vrsteVozila;
         }
+        //Pohrana dohvaćenih vrsta vozila
         private static Vrsta_vozila CreateObject2(SqlDataReader reader)
         {
             int id = int.Parse(reader["Id_vrste_vozila"].ToString());
@@ -123,7 +128,7 @@ namespace eBusProgramskoRjesenje.Repositories
             return vrsta_vozila;
         }
 
-        //Metoda za brisanje vozila
+        //Metoda za brisanje postojećeg vozila iz baze
         public static bool ObrisiVozilo(int voziloId)
         {
             try 

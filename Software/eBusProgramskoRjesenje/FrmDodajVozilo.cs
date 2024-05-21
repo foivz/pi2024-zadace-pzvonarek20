@@ -19,6 +19,7 @@ namespace eBusProgramskoRjesenje
             InitializeComponent();
         }
 
+        //Prikaz svih vrsta vozila u padajućoj listi
         private void LoadVrsteVozila()
         {
             List<Vrsta_vozila> vrsteVozila = RepozitorijVoznogParka.GetVrstaVozila();
@@ -27,6 +28,7 @@ namespace eBusProgramskoRjesenje
             cboVrstaVozila.ValueMember = "IdVrsteVozila";
         }
 
+        //Gumb za dodavanje novog vozila
         private void btnDodajNovoVozilo_Click(object sender, EventArgs e)
         {
 

@@ -28,6 +28,7 @@ namespace eBusProgramskoRjesenje
             dgvVozniPark.ClearSelection();
         }
 
+        //Prikaz popisa vozila iz baze podataka u DataGridView
         private void ShowVozila()
         {
             List<Vozilo> vozilaList = RepozitorijVoznogParka.GetVozila();
@@ -36,6 +37,7 @@ namespace eBusProgramskoRjesenje
 
         }
 
+        //Gumb za dodavanje novog vozila
         private void btnDodajVozilo_Click(object sender, EventArgs e)
         {
             FrmDodajVozilo frmDodajVozilo = new FrmDodajVozilo();   
@@ -43,6 +45,7 @@ namespace eBusProgramskoRjesenje
             ShowVozila();
         }
 
+        //Gumb za brisanje novog vozila
         private void btnBrisanje_Click(object sender, EventArgs e)
         {
             if (dgvVozniPark.SelectedRows.Count > 0)

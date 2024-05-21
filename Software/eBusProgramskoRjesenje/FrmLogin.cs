@@ -1,4 +1,6 @@
-﻿using System;
+﻿using eBusProgramskoRjesenje.Models;
+using eBusProgramskoRjesenje.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +14,13 @@ namespace eBusProgramskoRjesenje
 {
     public partial class FrmLogin : Form
     {
-        string korime = "korisnik";
-        string lozinka = "password";
+        public static Zaposlenik LoggedZaposlenik {  get; set; }
         public FrmLogin()
         {
             InitializeComponent();
         }
 
+        //Gumb za logiranje (provjeru korisnika)
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "")
@@ -31,7 +33,8 @@ namespace eBusProgramskoRjesenje
             }
             else 
             {
-                if (txtUsername.Text == korime && txtPassword.Text == lozinka)
+                LoggedZaposlenik = RepozitorijZaposlenika.GetZaposlenik(txtUsername.Text);
+                if (LoggedZaposlenik != null && LoggedZaposlenik.Lozinka.Trim() == txtPassword.Text)
                 {
                     FrmVozniPark frmVozniPark = new FrmVozniPark();
                     Hide();

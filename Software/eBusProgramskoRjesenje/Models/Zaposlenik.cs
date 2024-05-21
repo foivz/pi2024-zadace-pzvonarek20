@@ -8,7 +8,7 @@ namespace eBusProgramskoRjesenje.Models
 {
     public class Zaposlenik : Osoba
     {
-        public string korime { get; set; }
-        public string lozinka { get; set; }
+        public string Korime { get; set; }
+        public string Lozinka { get; set; }
     }
 }
