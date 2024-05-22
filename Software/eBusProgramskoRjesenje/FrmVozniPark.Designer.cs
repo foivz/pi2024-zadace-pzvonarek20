@@ -36,6 +36,7 @@
             this.btnPretraga = new System.Windows.Forms.Button();
             this.btnBrisanje = new System.Windows.Forms.Button();
             this.btnPromjeni = new System.Windows.Forms.Button();
+            this.btnResetiraj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniPark)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +99,7 @@
             this.btnPretraga.TabIndex = 4;
             this.btnPretraga.Text = "Pretraži";
             this.btnPretraga.UseVisualStyleBackColor = true;
+            this.btnPretraga.Click += new System.EventHandler(this.btnPretraga_Click);
             // 
             // btnBrisanje
             // 
@@ -119,11 +121,22 @@
             this.btnPromjeni.UseVisualStyleBackColor = true;
             this.btnPromjeni.Click += new System.EventHandler(this.btnPromjeni_Click);
             // 
+            // btnResetiraj
+            // 
+            this.btnResetiraj.Location = new System.Drawing.Point(352, 415);
+            this.btnResetiraj.Name = "btnResetiraj";
+            this.btnResetiraj.Size = new System.Drawing.Size(75, 23);
+            this.btnResetiraj.TabIndex = 7;
+            this.btnResetiraj.Text = "Resetiraj";
+            this.btnResetiraj.UseVisualStyleBackColor = true;
+            this.btnResetiraj.Click += new System.EventHandler(this.btnResetiraj_Click);
+            // 
             // FrmVozniPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 507);
+            this.Controls.Add(this.btnResetiraj);
             this.Controls.Add(this.btnPromjeni);
             this.Controls.Add(this.btnBrisanje);
             this.Controls.Add(this.btnPretraga);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Button btnPretraga;
         private System.Windows.Forms.Button btnBrisanje;
         private System.Windows.Forms.Button btnPromjeni;
+        private System.Windows.Forms.Button btnResetiraj;
     }
 }

@@ -100,6 +100,33 @@ namespace eBusProgramskoRjesenje
                 MessageBox.Show("Molimo odaberite željeno vozilo za promjenu.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnPretraga_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPretraga.Text))
+            {
+                MessageBox.Show("Molimo unesite parametre za pretragu.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string kriterij = txtPretraga.Text;
+            List<Vozilo> pretrazenaVozila = RepozitorijVozila.GetPretrazenaVozila(kriterij);
+            OsvjeziPrikaz(pretrazenaVozila);
+            dgvVozniPark.ClearSelection();
+        }
+
+        private void OsvjeziPrikaz(List<Vozilo> vozila)
+        { 
+            dgvVozniPark.DataSource = vozila;
+            dgvVozniPark.Refresh();
+        }
+
+        private void btnResetiraj_Click(object sender, EventArgs e)
+        {
+            txtPretraga.Text = string.Empty;
+            ShowVozila();
+            dgvVozniPark.ClearSelection();
+        }
     }
 }
 

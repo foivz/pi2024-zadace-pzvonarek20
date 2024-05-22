@@ -95,5 +95,47 @@ namespace eBusProgramskoRjesenje.Repositories
             return vozilo;
         }
 
+        public static List<Vozilo> GetPretrazenaVozila(string kriterij)
+        {
+            List<Vozilo> pretrazenaVozila = new List<Vozilo>();
+
+            string sql = $"SELECT v.Id_vozila, v.model_vozila, vr.naziv_vrste_vozila, v.tablica_vozila, v.namjena_vozila, v.detaljne_informacije " +
+                 "FROM vozilo v " +
+                 "JOIN vrsta_vozila vr ON v.Id_vrste_vozila = vr.Id_vrste_vozila " +
+                 $"WHERE vr.naziv_vrste_vozila LIKE '%{kriterij}%' OR v.model_vozila LIKE '%{kriterij}%' OR v.tablica_vozila LIKE '%{kriterij}%' OR v.namjena_vozila LIKE '%{kriterij}%'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+
+            while (reader.Read())
+            {
+                Vozilo vozilo = CreateObject4(reader);
+                pretrazenaVozila.Add(vozilo);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            
+            return pretrazenaVozila;
+        }
+
+        private static Vozilo CreateObject4(SqlDataReader reader)
+        {
+            int id = int.Parse(reader["Id_vozila"].ToString());
+            string modelVozila = reader["model_vozila"].ToString();
+            string nazivVrsteVozila = reader["naziv_vrste_vozila"].ToString();
+            string tablicaVozila = reader["tablica_vozila"].ToString();
+            string namjenaVozila = reader["namjena_vozila"].ToString();
+            string detaljneInformacije = reader["detaljne_informacije"].ToString();
+
+            var pretrazenaVozila = new Vozilo
+            {
+                IdVozila = id,
+                ModelVozila = modelVozila,
+                IdVrsteVozila = nazivVrsteVozila,
+                TablicaVozila = tablicaVozila,
+                NamjenaVozila = namjenaVozila,
+                DetaljneInformacije = detaljneInformacije
+            };
+            return pretrazenaVozila;
+        }
     }
 }
