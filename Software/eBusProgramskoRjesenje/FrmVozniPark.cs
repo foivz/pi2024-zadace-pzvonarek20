@@ -111,8 +111,16 @@ namespace eBusProgramskoRjesenje
 
             string kriterij = txtPretraga.Text;
             List<Vozilo> pretrazenaVozila = RepozitorijVozila.GetPretrazenaVozila(kriterij);
-            OsvjeziPrikaz(pretrazenaVozila);
-            dgvVozniPark.ClearSelection();
+
+            if (pretrazenaVozila.Count == 0)
+            {
+                MessageBox.Show("Nepostojeći podaci u bazi.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else 
+            {
+                OsvjeziPrikaz(pretrazenaVozila);
+                dgvVozniPark.ClearSelection();
+            }
         }
 
         private void OsvjeziPrikaz(List<Vozilo> vozila)
