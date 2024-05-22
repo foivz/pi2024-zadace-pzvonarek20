@@ -25,7 +25,7 @@ namespace eBusProgramskoRjesenje
 
         private void LoadVrsteVozila()
         {
-            List<Vrsta_vozila> vrsteVozila = RepozitorijVoznogParka.GetVrstaVozila();
+            List<Vrsta_vozila> vrsteVozila = RepozitorijVrsteVozila.GetVrstaVozila();
             foreach (Vrsta_vozila vv in vrsteVozila)
             {
                 cboVrstaVozilaPromjena.Items.Add(vv.NazivVrsteVozila.Trim());
@@ -40,7 +40,7 @@ namespace eBusProgramskoRjesenje
         private void LoadVoziloData()
         { 
             txtModelPromjena.Text = vozilo.ModelVozila;
-            cboVrstaVozilaPromjena.SelectedItem = RepozitorijVoznogParka.GetVrstaVozilaById(int.Parse(vozilo.IdVrsteVozila)).NazivVrsteVozila.Trim();
+            cboVrstaVozilaPromjena.SelectedItem = RepozitorijVrsteVozila.GetVrstaVozilaById(int.Parse(vozilo.IdVrsteVozila)).NazivVrsteVozila.Trim();
             txtTablicaVozilaPromjena.Text = vozilo.TablicaVozila;
             txtNamjenaVozilaPromjena.Text = vozilo.NamjenaVozila;
             txtDetaljneInformacijePromjena.Text = vozilo.DetaljneInformacije;
@@ -49,7 +49,7 @@ namespace eBusProgramskoRjesenje
         private void btnPormjeniPodatke_Click(object sender, EventArgs e)
         {
             string ModelVozila = txtModelPromjena.Text;
-            int IdVrsteVozila = RepozitorijVoznogParka.GetVrstaVozilaByName((string)cboVrstaVozilaPromjena.SelectedItem).IdVrsteVozila;
+            int IdVrsteVozila = RepozitorijVrsteVozila.GetVrstaVozilaByName((string)cboVrstaVozilaPromjena.SelectedItem).IdVrsteVozila;
             string TablicaVozila = txtTablicaVozilaPromjena.Text;
             string NamjenaVozila = txtNamjenaVozilaPromjena.Text;
             string DetaljneInformacije = txtDetaljneInformacijePromjena.Text;

@@ -31,7 +31,7 @@ namespace eBusProgramskoRjesenje
         //Prikaz popisa vozila iz baze podataka u DataGridView
         private void ShowVozila()
         {
-            List<Vozilo> vozilaList = RepozitorijVoznogParka.GetVozila();
+            List<Vozilo> vozilaList = RepozitorijVozila.GetVozila();
             vozila = new BindingList<Vozilo>(vozilaList);
             dgvVozniPark.DataSource = vozila;
 
@@ -85,7 +85,7 @@ namespace eBusProgramskoRjesenje
                 if (odabranIndeks >= 0 && odabranIndeks < dgvVozniPark.Rows.Count)
                 {
                     int odabranoVoziloId = (int)dgvVozniPark.Rows[odabranIndeks].Cells["IdVozila"].Value;
-                    Vozilo odabranoVozilo = RepozitorijVoznogParka.GetVozilo(odabranoVoziloId);
+                    Vozilo odabranoVozilo = RepozitorijVozila.GetVozilo(odabranoVoziloId);
 
                     if (odabranoVozilo != null)
                     {

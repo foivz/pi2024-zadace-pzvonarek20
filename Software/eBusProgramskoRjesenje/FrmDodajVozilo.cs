@@ -22,7 +22,7 @@ namespace eBusProgramskoRjesenje
         //Prikaz svih vrsta vozila u padajućoj listi
         private void LoadVrsteVozila()
         {
-            List<Vrsta_vozila> vrsteVozila = RepozitorijVoznogParka.GetVrstaVozila();
+            List<Vrsta_vozila> vrsteVozila = RepozitorijVrsteVozila.GetVrstaVozila();
             cboVrstaVozila.DataSource = vrsteVozila;
             cboVrstaVozila.DisplayMember = "NazivVrsteVozila";
             cboVrstaVozila.ValueMember = "IdVrsteVozila";

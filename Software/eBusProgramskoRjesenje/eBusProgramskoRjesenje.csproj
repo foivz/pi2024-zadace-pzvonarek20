@@ -81,7 +81,9 @@
     <Compile Include="Models\Zaposlenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\RepozitorijVozila.cs" />
     <Compile Include="Repositories\RepozitorijVoznogParka.cs" />
+    <Compile Include="Repositories\RepozitorijVrsteVozila.cs" />
     <Compile Include="Repositories\RepozitorijZaposlenika.cs" />
     <EmbeddedResource Include="FrmDodajVozilo.resx">
       <DependentUpon>FrmDodajVozilo.cs</DependentUpon>
