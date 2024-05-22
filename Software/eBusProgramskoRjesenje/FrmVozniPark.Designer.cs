@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVozniPark = new System.Windows.Forms.DataGridView();
             this.btnDodajVozilo = new System.Windows.Forms.Button();
             this.txtPretraga = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPretraga = new System.Windows.Forms.Button();
             this.btnBrisanje = new System.Windows.Forms.Button();
+            this.btnPromjeni = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniPark)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,14 +45,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVozniPark.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVozniPark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVozniPark.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVozniPark.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVozniPark.Location = new System.Drawing.Point(25, 27);
             this.dgvVozniPark.MultiSelect = false;
             this.dgvVozniPark.Name = "dgvVozniPark";
@@ -108,11 +109,22 @@
             this.btnBrisanje.UseVisualStyleBackColor = true;
             this.btnBrisanje.Click += new System.EventHandler(this.btnBrisanje_Click);
             // 
+            // btnPromjeni
+            // 
+            this.btnPromjeni.Location = new System.Drawing.Point(622, 389);
+            this.btnPromjeni.Name = "btnPromjeni";
+            this.btnPromjeni.Size = new System.Drawing.Size(148, 61);
+            this.btnPromjeni.TabIndex = 6;
+            this.btnPromjeni.Text = "Promjena podataka";
+            this.btnPromjeni.UseVisualStyleBackColor = true;
+            this.btnPromjeni.Click += new System.EventHandler(this.btnPromjeni_Click);
+            // 
             // FrmVozniPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 507);
+            this.Controls.Add(this.btnPromjeni);
             this.Controls.Add(this.btnBrisanje);
             this.Controls.Add(this.btnPretraga);
             this.Controls.Add(this.label1);
@@ -138,5 +150,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPretraga;
         private System.Windows.Forms.Button btnBrisanje;
+        private System.Windows.Forms.Button btnPromjeni;
     }
 }

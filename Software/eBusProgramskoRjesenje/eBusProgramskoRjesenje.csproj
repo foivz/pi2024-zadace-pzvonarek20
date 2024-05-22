@@ -63,6 +63,12 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPromjena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPromjena.Designer.cs">
+      <DependentUpon>FrmPromjena.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVozniPark.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPromjena.resx">
+      <DependentUpon>FrmPromjena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVozniPark.resx">
       <DependentUpon>FrmVozniPark.cs</DependentUpon>

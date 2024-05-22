@@ -76,6 +76,30 @@ namespace eBusProgramskoRjesenje
                 MessageBox.Show("Molimo odaberite željeno vozilo za brisanje.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnPromjeni_Click(object sender, EventArgs e)
+        {
+            if (dgvVozniPark.SelectedRows.Count > 0)
+            {
+                int odabranIndeks = dgvVozniPark.SelectedRows[0].Index;
+                if (odabranIndeks >= 0 && odabranIndeks < dgvVozniPark.Rows.Count)
+                {
+                    int odabranoVoziloId = (int)dgvVozniPark.Rows[odabranIndeks].Cells["IdVozila"].Value;
+                    Vozilo odabranoVozilo = RepozitorijVoznogParka.GetVozilo(odabranoVoziloId);
+
+                    if (odabranoVozilo != null)
+                    {
+                        FrmPromjena frmPromjena = new FrmPromjena(odabranoVozilo);
+                        frmPromjena.ShowDialog();
+                        ShowVozila();
+                    }
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Molimo odaberite željeno vozilo za promjenu.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
 

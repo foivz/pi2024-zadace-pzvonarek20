@@ -10,7 +10,7 @@ namespace eBusProgramskoRjesenje.Models
     {
         public int IdVozila { get; set; }
         public string ModelVozila { get; set; }
-        public string NazivVrsteVozila { get; set;}
+        public string IdVrsteVozila { get; set;}
         public string TablicaVozila { get; set; }
         public string NamjenaVozila { get; set; }
         public string DetaljneInformacije { get; set; }
