@@ -138,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 401);
+            this.ClientSize = new System.Drawing.Size(742, 401);
             this.Controls.Add(this.cboVrstaVozila);
             this.Controls.Add(this.txtModelVozila);
             this.Controls.Add(this.label1);
@@ -155,7 +155,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmDodajVozilo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDodajVozilo";
+            this.Text = "Dodavanje novog vozila";
             this.Load += new System.EventHandler(this.FrmDodajVozilo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

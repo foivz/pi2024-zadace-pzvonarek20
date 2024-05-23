@@ -45,14 +45,14 @@
             // 
             this.cboVrstaVozilaPromjena.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboVrstaVozilaPromjena.FormattingEnabled = true;
-            this.cboVrstaVozilaPromjena.Location = new System.Drawing.Point(134, 181);
+            this.cboVrstaVozilaPromjena.Location = new System.Drawing.Point(93, 153);
             this.cboVrstaVozilaPromjena.Name = "cboVrstaVozilaPromjena";
             this.cboVrstaVozilaPromjena.Size = new System.Drawing.Size(179, 24);
             this.cboVrstaVozilaPromjena.TabIndex = 24;
             // 
             // txtModelPromjena
             // 
-            this.txtModelPromjena.Location = new System.Drawing.Point(134, 137);
+            this.txtModelPromjena.Location = new System.Drawing.Point(93, 109);
             this.txtModelPromjena.Name = "txtModelPromjena";
             this.txtModelPromjena.Size = new System.Drawing.Size(131, 22);
             this.txtModelPromjena.TabIndex = 23;
@@ -60,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(131, 118);
+            this.label1.Location = new System.Drawing.Point(90, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 22;
@@ -68,7 +68,7 @@
             // 
             // btnPormjeniPodatke
             // 
-            this.btnPormjeniPodatke.Location = new System.Drawing.Point(505, 297);
+            this.btnPormjeniPodatke.Location = new System.Drawing.Point(464, 269);
             this.btnPormjeniPodatke.Name = "btnPormjeniPodatke";
             this.btnPormjeniPodatke.Size = new System.Drawing.Size(165, 36);
             this.btnPormjeniPodatke.TabIndex = 21;
@@ -78,7 +78,7 @@
             // 
             // txtDetaljneInformacijePromjena
             // 
-            this.txtDetaljneInformacijePromjena.Location = new System.Drawing.Point(384, 137);
+            this.txtDetaljneInformacijePromjena.Location = new System.Drawing.Point(343, 109);
             this.txtDetaljneInformacijePromjena.Multiline = true;
             this.txtDetaljneInformacijePromjena.Name = "txtDetaljneInformacijePromjena";
             this.txtDetaljneInformacijePromjena.Size = new System.Drawing.Size(286, 154);
@@ -87,7 +87,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(381, 118);
+            this.label5.Location = new System.Drawing.Point(340, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 16);
             this.label5.TabIndex = 19;
@@ -95,7 +95,7 @@
             // 
             // txtNamjenaVozilaPromjena
             // 
-            this.txtNamjenaVozilaPromjena.Location = new System.Drawing.Point(134, 269);
+            this.txtNamjenaVozilaPromjena.Location = new System.Drawing.Point(93, 241);
             this.txtNamjenaVozilaPromjena.Name = "txtNamjenaVozilaPromjena";
             this.txtNamjenaVozilaPromjena.Size = new System.Drawing.Size(179, 22);
             this.txtNamjenaVozilaPromjena.TabIndex = 18;
@@ -103,7 +103,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(131, 250);
+            this.label4.Location = new System.Drawing.Point(90, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 17;
@@ -111,7 +111,7 @@
             // 
             // txtTablicaVozilaPromjena
             // 
-            this.txtTablicaVozilaPromjena.Location = new System.Drawing.Point(134, 225);
+            this.txtTablicaVozilaPromjena.Location = new System.Drawing.Point(93, 197);
             this.txtTablicaVozilaPromjena.Name = "txtTablicaVozilaPromjena";
             this.txtTablicaVozilaPromjena.Size = new System.Drawing.Size(131, 22);
             this.txtTablicaVozilaPromjena.TabIndex = 16;
@@ -119,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(131, 206);
+            this.label3.Location = new System.Drawing.Point(90, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 16);
             this.label3.TabIndex = 15;
@@ -128,7 +128,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 162);
+            this.label2.Location = new System.Drawing.Point(90, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 14;
@@ -138,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(717, 413);
             this.Controls.Add(this.cboVrstaVozilaPromjena);
             this.Controls.Add(this.txtModelPromjena);
             this.Controls.Add(this.label1);
@@ -154,7 +154,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmPromjena";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPromjena";
+            this.Text = "Promjena podataka";
             this.Load += new System.EventHandler(this.FrmPromjena_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
