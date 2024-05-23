@@ -21,6 +21,8 @@ namespace eBusProgramskoRjesenje
             this.vozilo = vozilo;
             LoadVrsteVozila();
             LoadVoziloData();
+            this.Text = "Promjena podataka za vozilo: " + vozilo.ModelVozila; 
+
         }
 
         private void LoadVrsteVozila()
