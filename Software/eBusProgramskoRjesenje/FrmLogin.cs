@@ -18,6 +18,8 @@ namespace eBusProgramskoRjesenje
         public FrmLogin()
         {
             InitializeComponent();
+            txtUsername.KeyDown += new KeyEventHandler(OnKeyDownHandler);
+            txtPassword.KeyDown += new KeyEventHandler(OnKeyDownHandler);
         }
 
         //Gumb za logiranje (provjeru korisnika)
@@ -48,5 +50,15 @@ namespace eBusProgramskoRjesenje
             }
 
         }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            { 
+                e.SuppressKeyPress = true;
+                btnLogin_Click(sender, e);
+            }
+        }
+
     }
 }

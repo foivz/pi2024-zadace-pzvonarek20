@@ -51,6 +51,7 @@ namespace eBusProgramskoRjesenje
         private void FrmDodajVozilo_Load(object sender, EventArgs e)
         {
             LoadVrsteVozila();
+            this.ActiveControl = label1;
         }
     }
 }
