@@ -54,28 +54,33 @@ namespace eBusProgramskoRjesenje
                 if (odabranIndeks >= 0 && odabranIndeks < vozila.Count)
                 {
                     int odabranoVoziloId = (int)dgvVozniPark.Rows[odabranIndeks].Cells["IdVozila"].Value;
-                    bool uspjesnoBrisanje = RepozitorijVoznogParka.ObrisiVozilo(odabranoVoziloId);
 
-                    if (uspjesnoBrisanje)
+                    var potvrda = MessageBox.Show("Jeste li sigurni da želite obrisati ovo vozilo?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (potvrda == DialogResult.Yes)
                     {
-                        vozila.RemoveAt(odabranIndeks);
-                        MessageBox.Show("Vozilo je uspješno obrisano.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Došlo je do greške prilikom brisanja vozila.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        bool uspjesnoBrisanje = RepozitorijVoznogParka.ObrisiVozilo(odabranoVoziloId);
+
+                        if (uspjesnoBrisanje)
+                        {
+                            vozila.RemoveAt(odabranIndeks);
+                            MessageBox.Show("Vozilo je uspješno obrisano.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Došlo je do greške prilikom brisanja vozila.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Molim odaberite željeno vozilo za brisanje.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Molimo odaberite željeno vozilo za brisanje.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else 
-            {
+            else {
                 MessageBox.Show("Molimo odaberite željeno vozilo za brisanje.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
+        }   
 
         private void btnPromjeni_Click(object sender, EventArgs e)
         {
