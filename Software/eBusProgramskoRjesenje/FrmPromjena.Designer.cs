@@ -150,8 +150,12 @@
             this.Controls.Add(this.txtTablicaVozilaPromjena);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPromjena";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPromjena";
+            this.Load += new System.EventHandler(this.FrmPromjena_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

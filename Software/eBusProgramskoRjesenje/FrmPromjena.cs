@@ -37,11 +37,11 @@ namespace eBusProgramskoRjesenje
 
         private void LoadVoziloData()
         { 
-            txtModelPromjena.Text = vozilo.ModelVozila;
+            txtModelPromjena.Text = vozilo.ModelVozila.Trim();
             cboVrstaVozilaPromjena.SelectedItem = RepozitorijVrsteVozila.GetVrstaVozilaById(int.Parse(vozilo.IdVrsteVozila)).NazivVrsteVozila.Trim();
-            txtTablicaVozilaPromjena.Text = vozilo.TablicaVozila;
-            txtNamjenaVozilaPromjena.Text = vozilo.NamjenaVozila;
-            txtDetaljneInformacijePromjena.Text = vozilo.DetaljneInformacije;
+            txtTablicaVozilaPromjena.Text = vozilo.TablicaVozila.Trim();
+            txtNamjenaVozilaPromjena.Text = vozilo.NamjenaVozila.Trim();
+            txtDetaljneInformacijePromjena.Text = vozilo.DetaljneInformacije.Trim();
         }
 
         private void btnPormjeniPodatke_Click(object sender, EventArgs e)
@@ -55,6 +55,11 @@ namespace eBusProgramskoRjesenje
             RepozitorijVoznogParka.UpdateVozilo(vozilo.IdVozila, ModelVozila, IdVrsteVozila, TablicaVozila, NamjenaVozila, DetaljneInformacije);
             MessageBox.Show("Podaci su uspješno ažurirani.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
+        }
+
+        private void FrmPromjena_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = label1;
         }
     }
 }
