@@ -15,6 +15,8 @@ namespace eBusProgramskoRjesenje
     public partial class FrmPromjena : Form
     {
         private Vozilo vozilo;
+
+        //Prikaz forme i naziv
         public FrmPromjena(Vozilo vozilo)
         {
             InitializeComponent();
@@ -22,9 +24,9 @@ namespace eBusProgramskoRjesenje
             LoadVrsteVozila();
             LoadVoziloData();
             this.Text = "Promjena podataka za vozilo: " + vozilo.ModelVozila; 
-
         }
 
+        //Lista za prikaz vrste vozila kod promjene
         private void LoadVrsteVozila()
         {
             List<Vrsta_vozila> vrsteVozila = RepozitorijVrsteVozila.GetVrstaVozila();
@@ -37,6 +39,7 @@ namespace eBusProgramskoRjesenje
             cboVrstaVozilaPromjena.ValueMember = "IdVrsteVozila";
         }
 
+        //Ucitavanje dohvacenih podataka
         private void LoadVoziloData()
         { 
             txtModelPromjena.Text = vozilo.ModelVozila.Trim();
@@ -46,6 +49,7 @@ namespace eBusProgramskoRjesenje
             txtDetaljneInformacijePromjena.Text = vozilo.DetaljneInformacije.Trim();
         }
 
+        //Gumb za promjenu podataka
         private void btnPormjeniPodatke_Click(object sender, EventArgs e)
         {
             string ModelVozila = txtModelPromjena.Text;

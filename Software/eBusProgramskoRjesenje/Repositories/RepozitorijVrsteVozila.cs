@@ -32,6 +32,7 @@ namespace eBusProgramskoRjesenje.Repositories
             return vrsteVozila;
         }
 
+        //Metoda za dohvacanje vozila po ID
         public static Vrsta_vozila GetVrstaVozilaById(int id)
         {
             string sql = $"SELECT * FROM vrsta_vozila WHERE Id_vrste_vozila = {id}";
@@ -49,6 +50,7 @@ namespace eBusProgramskoRjesenje.Repositories
             return vrsta_Vozila;
         }
 
+        //Metoda za dohvacanje vozila po imenu
         public static Vrsta_vozila GetVrstaVozilaByName(string name)
         {
             string sql = $"SELECT * FROM vrsta_vozila WHERE naziv_vrste_vozila = '{name}'";

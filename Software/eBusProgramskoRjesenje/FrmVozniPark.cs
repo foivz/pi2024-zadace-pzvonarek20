@@ -82,6 +82,7 @@ namespace eBusProgramskoRjesenje
             }
         }   
 
+        //Gumb za promjenu podataka
         private void btnPromjeni_Click(object sender, EventArgs e)
         {
             if (dgvVozniPark.SelectedRows.Count > 0)
@@ -106,6 +107,7 @@ namespace eBusProgramskoRjesenje
             }
         }
 
+        //Gumb za pretragu
         private void btnPretraga_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtPretraga.Text))
@@ -128,12 +130,14 @@ namespace eBusProgramskoRjesenje
             }
         }
 
+        //Osvjezavanje prikaza 
         private void OsvjeziPrikaz(List<Vozilo> vozila)
         { 
             dgvVozniPark.DataSource = vozila;
             dgvVozniPark.Refresh();
         }
 
+        //Gumb za osvjezavanje prikaza nakon pretrage
         private void btnResetiraj_Click(object sender, EventArgs e)
         {
             txtPretraga.Text = string.Empty;

@@ -12,6 +12,7 @@ namespace eBusProgramskoRjesenje.Repositories
 {
     internal class RepozitorijZaposlenika
     {
+        //Metode za dohvacanje korisnika
         public static Zaposlenik GetZaposlenik(string korime)
         {
             string sql = $"SELECT * FROM zaposlenik WHERE korime = '{korime}'";

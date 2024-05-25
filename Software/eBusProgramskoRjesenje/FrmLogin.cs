@@ -51,6 +51,7 @@ namespace eBusProgramskoRjesenje
 
         }
 
+        //Mogucnost logiranja pritiskom na enter
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

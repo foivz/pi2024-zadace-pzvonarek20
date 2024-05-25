@@ -50,6 +50,7 @@ namespace eBusProgramskoRjesenje.Repositories
             }
         }
 
+        //Metoda za azuriranje vozila
         public static bool UpdateVozilo(int IdVozila, string ModelVozila, int IdVrsteVozila, string TablicaVozila, string NamjenaVozila, string DetaljneInformacijeVozila)
         {
             try
