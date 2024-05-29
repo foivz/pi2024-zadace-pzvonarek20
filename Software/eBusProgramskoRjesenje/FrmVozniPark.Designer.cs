@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVozniPark));
             this.dgvVozniPark = new System.Windows.Forms.DataGridView();
             this.btnDodajVozilo = new System.Windows.Forms.Button();
@@ -46,33 +47,44 @@
             // 
             this.dgvVozniPark.AllowUserToResizeColumns = false;
             this.dgvVozniPark.AllowUserToResizeRows = false;
-            this.dgvVozniPark.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvVozniPark.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVozniPark.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvVozniPark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVozniPark.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvVozniPark.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvVozniPark.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVozniPark.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVozniPark.Location = new System.Drawing.Point(27, 103);
             this.dgvVozniPark.MultiSelect = false;
             this.dgvVozniPark.Name = "dgvVozniPark";
             this.dgvVozniPark.ReadOnly = true;
             this.dgvVozniPark.RowHeadersWidth = 51;
+            this.dgvVozniPark.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvVozniPark.RowTemplate.Height = 24;
             this.dgvVozniPark.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvVozniPark.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVozniPark.Size = new System.Drawing.Size(1053, 343);
+            this.dgvVozniPark.Size = new System.Drawing.Size(1084, 343);
             this.dgvVozniPark.TabIndex = 0;
             // 
             // btnDodajVozilo
             // 
+            this.btnDodajVozilo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajVozilo.BackColor = System.Drawing.Color.LightGreen;
-            this.btnDodajVozilo.Location = new System.Drawing.Point(932, 465);
+            this.btnDodajVozilo.Location = new System.Drawing.Point(963, 465);
             this.btnDodajVozilo.Name = "btnDodajVozilo";
             this.btnDodajVozilo.Size = new System.Drawing.Size(148, 61);
             this.btnDodajVozilo.TabIndex = 1;
@@ -82,6 +94,7 @@
             // 
             // txtPretraga
             // 
+            this.txtPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPretraga.Location = new System.Drawing.Point(37, 484);
             this.txtPretraga.Name = "txtPretraga";
             this.txtPretraga.Size = new System.Drawing.Size(196, 22);
@@ -89,6 +102,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(34, 465);
             this.label1.Name = "label1";
@@ -98,6 +112,7 @@
             // 
             // btnPretraga
             // 
+            this.btnPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPretraga.Location = new System.Drawing.Point(239, 480);
             this.btnPretraga.Name = "btnPretraga";
             this.btnPretraga.Size = new System.Drawing.Size(75, 31);
@@ -108,8 +123,9 @@
             // 
             // btnBrisanje
             // 
+            this.btnBrisanje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBrisanje.BackColor = System.Drawing.Color.IndianRed;
-            this.btnBrisanje.Location = new System.Drawing.Point(778, 465);
+            this.btnBrisanje.Location = new System.Drawing.Point(809, 465);
             this.btnBrisanje.Name = "btnBrisanje";
             this.btnBrisanje.Size = new System.Drawing.Size(148, 61);
             this.btnBrisanje.TabIndex = 5;
@@ -119,7 +135,8 @@
             // 
             // btnPromjeni
             // 
-            this.btnPromjeni.Location = new System.Drawing.Point(624, 465);
+            this.btnPromjeni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPromjeni.Location = new System.Drawing.Point(655, 465);
             this.btnPromjeni.Name = "btnPromjeni";
             this.btnPromjeni.Size = new System.Drawing.Size(148, 61);
             this.btnPromjeni.TabIndex = 6;
@@ -129,6 +146,7 @@
             // 
             // btnResetiraj
             // 
+            this.btnResetiraj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnResetiraj.Location = new System.Drawing.Point(37, 512);
             this.btnResetiraj.Name = "btnResetiraj";
             this.btnResetiraj.Size = new System.Drawing.Size(196, 31);
@@ -139,9 +157,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(255, 9);
+            this.label2.Location = new System.Drawing.Point(271, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(601, 71);
             this.label2.TabIndex = 8;
@@ -151,7 +170,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 572);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.ClientSize = new System.Drawing.Size(1142, 572);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnResetiraj);
             this.Controls.Add(this.btnPromjeni);
@@ -161,10 +181,10 @@
             this.Controls.Add(this.txtPretraga);
             this.Controls.Add(this.btnDodajVozilo);
             this.Controls.Add(this.dgvVozniPark);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1160, 619);
             this.Name = "FrmVozniPark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prikaz voznog parka";
