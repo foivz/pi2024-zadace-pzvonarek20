@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVozniPark = new System.Windows.Forms.DataGridView();
             this.btnDodajVozilo = new System.Windows.Forms.Button();
             this.txtPretraga = new System.Windows.Forms.TextBox();
@@ -49,14 +49,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVozniPark.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVozniPark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVozniPark.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVozniPark.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvVozniPark.Location = new System.Drawing.Point(27, 103);
             this.dgvVozniPark.MultiSelect = false;
             this.dgvVozniPark.Name = "dgvVozniPark";
@@ -128,23 +128,23 @@
             // 
             // btnResetiraj
             // 
-            this.btnResetiraj.Location = new System.Drawing.Point(239, 517);
+            this.btnResetiraj.Location = new System.Drawing.Point(37, 512);
             this.btnResetiraj.Name = "btnResetiraj";
-            this.btnResetiraj.Size = new System.Drawing.Size(75, 31);
+            this.btnResetiraj.Size = new System.Drawing.Size(196, 31);
             this.btnResetiraj.TabIndex = 7;
-            this.btnResetiraj.Text = "Resetiraj";
+            this.btnResetiraj.Text = "Resetiraj pretragu";
             this.btnResetiraj.UseVisualStyleBackColor = true;
             this.btnResetiraj.Click += new System.EventHandler(this.btnResetiraj_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Britannic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(396, 19);
+            this.label2.Font = new System.Drawing.Font("Century", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(255, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(311, 67);
+            this.label2.Size = new System.Drawing.Size(601, 71);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Vozni park";
+            this.label2.Text = "Prikaz voznog parka";
             // 
             // FrmVozniPark
             // 
