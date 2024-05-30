@@ -38,6 +38,8 @@ Zadaća 1. - Analiza i specifikacija zahtjeva - https://github.com/foivz/pi2024-
 
 Zadaća 2. - Specifikacija dizajna programskog proizvoda - https://github.com/foivz/pi2024-zadace-pzvonarek20/wiki/Specifikacija-dizajna
 
+Zadaća 3 - Implementacija programskog proizvoda - 
+
 ## Resursi
 
 Svi korišteni resursi nalaze se u mapi _Documentation_.
