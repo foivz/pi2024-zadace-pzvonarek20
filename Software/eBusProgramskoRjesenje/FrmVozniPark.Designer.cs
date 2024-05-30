@@ -77,14 +77,14 @@
             this.dgvVozniPark.RowTemplate.Height = 24;
             this.dgvVozniPark.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvVozniPark.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVozniPark.Size = new System.Drawing.Size(1084, 343);
+            this.dgvVozniPark.Size = new System.Drawing.Size(1102, 390);
             this.dgvVozniPark.TabIndex = 0;
             // 
             // btnDodajVozilo
             // 
             this.btnDodajVozilo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajVozilo.BackColor = System.Drawing.Color.LightGreen;
-            this.btnDodajVozilo.Location = new System.Drawing.Point(963, 465);
+            this.btnDodajVozilo.Location = new System.Drawing.Point(981, 512);
             this.btnDodajVozilo.Name = "btnDodajVozilo";
             this.btnDodajVozilo.Size = new System.Drawing.Size(148, 61);
             this.btnDodajVozilo.TabIndex = 1;
@@ -95,7 +95,7 @@
             // txtPretraga
             // 
             this.txtPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPretraga.Location = new System.Drawing.Point(37, 484);
+            this.txtPretraga.Location = new System.Drawing.Point(37, 531);
             this.txtPretraga.Name = "txtPretraga";
             this.txtPretraga.Size = new System.Drawing.Size(196, 22);
             this.txtPretraga.TabIndex = 2;
@@ -104,7 +104,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 465);
+            this.label1.Location = new System.Drawing.Point(34, 512);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 16);
             this.label1.TabIndex = 3;
@@ -113,7 +113,7 @@
             // btnPretraga
             // 
             this.btnPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPretraga.Location = new System.Drawing.Point(239, 480);
+            this.btnPretraga.Location = new System.Drawing.Point(239, 527);
             this.btnPretraga.Name = "btnPretraga";
             this.btnPretraga.Size = new System.Drawing.Size(75, 31);
             this.btnPretraga.TabIndex = 4;
@@ -125,7 +125,7 @@
             // 
             this.btnBrisanje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBrisanje.BackColor = System.Drawing.Color.IndianRed;
-            this.btnBrisanje.Location = new System.Drawing.Point(809, 465);
+            this.btnBrisanje.Location = new System.Drawing.Point(827, 512);
             this.btnBrisanje.Name = "btnBrisanje";
             this.btnBrisanje.Size = new System.Drawing.Size(148, 61);
             this.btnBrisanje.TabIndex = 5;
@@ -136,7 +136,7 @@
             // btnPromjeni
             // 
             this.btnPromjeni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPromjeni.Location = new System.Drawing.Point(655, 465);
+            this.btnPromjeni.Location = new System.Drawing.Point(673, 512);
             this.btnPromjeni.Name = "btnPromjeni";
             this.btnPromjeni.Size = new System.Drawing.Size(148, 61);
             this.btnPromjeni.TabIndex = 6;
@@ -147,7 +147,7 @@
             // btnResetiraj
             // 
             this.btnResetiraj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnResetiraj.Location = new System.Drawing.Point(37, 512);
+            this.btnResetiraj.Location = new System.Drawing.Point(37, 559);
             this.btnResetiraj.Name = "btnResetiraj";
             this.btnResetiraj.Size = new System.Drawing.Size(196, 31);
             this.btnResetiraj.TabIndex = 7;
@@ -160,7 +160,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(271, 9);
+            this.label2.Location = new System.Drawing.Point(280, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(601, 71);
             this.label2.TabIndex = 8;
@@ -171,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1142, 572);
+            this.ClientSize = new System.Drawing.Size(1160, 619);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnResetiraj);
             this.Controls.Add(this.btnPromjeni);
@@ -181,6 +181,7 @@
             this.Controls.Add(this.txtPretraga);
             this.Controls.Add(this.btnDodajVozilo);
             this.Controls.Add(this.dgvVozniPark);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
